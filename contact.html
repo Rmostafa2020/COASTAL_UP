@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rahnuma Mostafa">
+    <title>Coastal UP Partners LLC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo img {
+            width: 900px;
+            height: 100px;
+            margin-right: 80pt;
+            margin-top: 25px;
+            
+        }
+
+
+        header {
+            text-align: center;
+            background-color: #055aa8;
+            border-bottom: 1px solid #eee;
+
+        }
+
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 30px;
+            padding-left: 400px;
+
+        }
+
+        nav a {
+
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0 35px;
+            padding: 10px;
+            position: relative;
+            font-size: 15pt;
+
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: rgb(255, 252, 252);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+      
+
+        .mySlides {
+            display: none;
+        }
+
+
+        img {
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+       
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: black;
+            font-weight: bold;
+            font-size: 25px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(144, 148, 148, 0.8);
+        }
+
+   
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .8
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+
+
+
+
+        .background-section {
+            width: 100%;
+            background-color: #ffffff;
+           
+            padding: 20px;
+         
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            
+        }
+
+
+
+        .right-logos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 80px;
+            flex: 1;
+        }
+
+        .contactlogo {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .logo-containerImage {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+
+
+
+        @media (max-width: 1366px) {
+
+            .logo img {
+                width: 400px;
+                height: auto;
+                margin-left: 0;
+               
+            }
+
+           
+
+            nav {
+               
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+               justify-items: center;
+               padding-left: 0;
+               padding-right: 5px;
+               margin-top: 10px;
+           }
+
+           nav a {
+               margin: 10px 0;
+               
+           }
+
+          
+            .image-container {
+                height: 300px;
+            }
+
+          
+            .center {
+                font-size: 20px;
+                padding: 20px;
+            }
+
+
+            .logo-containerImage {
+                max-width: 100px;
+            }
+
+            .right-logos {
+                padding-left: 35%;
+                justify-self: center;
+                flex-direction: column;
+
+            }
+
+            .contact-item img {
+                width: 50px;
+            }
+
+        }
+
+        p {
+            margin-top: 40px;
+            color: #f5c126;
+            text-align: center;
+            font-size: 40px;
+        
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Color logo with background.svg" alt="Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="team.html">TEAM</a>
+            <a href="aboutus1.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+
+
+
+    <div class="image-container">
+        <div class="mySlides fade">
+            <img src="Holiday inn.png">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Hotel Picture.png">
+        </div>
+
+       
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+
+    </div>
+
+
+    <div style="text-align:center;background-color:#055aa8">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+
+    <P><strong>Please Contact Us</strong></P>
+
+
+
+
+
+
+
+
+    <section class="background-section">
+        <div class="logo-container">
+
+            <div class="right-logos">
+                <div class="contact-item">
+                    <img src="addressNoBg.png" alt="Address" class="contactlogo">
+                    <Address
+                        style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top: 30px;color: #055aa8;">
+                        267 Fifth Avenue <br>
+                        Suite 1000<br>
+                        New York, NY 10016
+                    </Address>
+
+                </div>
+
+
+
+                <div class="contact-item">
+                    <img src="emailNoBg.png" alt="Email" class="contactlogo">
+                    <email
+                        style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top: 30px;color: #055aa8;">
+                        info@coastalup.com</email>
+                </div>
+
+
+                <div class="contact-item">
+                    <img src="phoneNoBg.png" alt="phone" class="contactlogo">
+                    <phone
+                        style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top: 30px;color: #055aa8;">
+                        (212)-643-8850</phone>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

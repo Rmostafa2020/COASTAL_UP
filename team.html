@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rahnuma Mostafa">
+    <title>Coastal UP Partners LLC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Kaisei+Decol&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+
+
+   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+    .logo img {
+        width: 900px;
+        height: 150px;
+        margin-right: 80pt;
+}
+
+    
+        header {
+            text-align: center;
+            background-color: #055aa8;
+            border-bottom: 1px solid #eee;
+           
+        }
+
+
+        nav {
+            display: flex;
+            flex-direction: row; 
+            align-items: center;
+            margin-top: 0px;
+            padding-left: 400px;
+            
+        }
+
+        nav a {
+          
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0 35px;
+            padding: 10px;
+            position: relative;
+            font-size: 15pt;
+
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: rgb(255, 252, 252);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+
+        h2 {
+    padding-bottom: 5px;
+   
+}
+
+
+.about-container {
+    display: flex; 
+    justify-content: space-between;
+  
+}
+
+
+.about-section {
+    flex: 1; 
+    margin: 0 10px; 
+    padding: 20px;
+    background-color: white; 
+    border-radius: 5px;
+}
+
+.marginTop {
+    margin-top: 50px;
+}
+
+hr {
+    border: none;          
+    height: 1px;          
+    background-color: #b7b1b1; 
+    margin: 5px 0;    
+
+}
+
+
+.about-content {
+    display: flex; 
+    align-items: center; 
+    
+}
+
+
+.about-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.about-imageForDavid {
+    margin-top: 0;
+    margin-bottom:0;
+    width: 250px;
+    height: 250px;
+    margin-right: 0;
+}
+
+.about-imageForPavan {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 225px;
+    margin-right: 10px;
+
+
+}
+
+.about-description {
+    margin-top: 5px;
+    flex: 1;
+    }
+
+    h3 {
+        color: gray;
+    }
+
+   
+.modal {
+    display: none; 
+    position: fixed;
+    padding-top: 200px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0,0,0,0.4);
+
+    justify-content: center;
+    align-items: center;
+
+   
+   
+}
+
+.modal-content {
+    
+    background-color: #fefefe;
+    margin: auto;
+    padding-left: 10px;
+    width: 40%;
+    border:1px solid #888;
+}
+
+
+
+.close {
+    color: rgb(27, 24, 24);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.view-bio-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #055aa8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.view-bio-btn:hover {
+    background-color: #286a6e;
+}
+
+
+
+.textalign {
+    text-align: center;
+}
+
+li {
+   
+    font-family: "Roboto Serif", serif;
+    font-style: italic;
+    font-weight: 200;
+    padding: 0;
+    color: #055aa8;
+   
+}
+
+ul {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+
+.about-imageModel{
+  
+    height: 150px; 
+   
+   padding-left: 35%;
+   padding-right: 65%;
+}
+
+
+
+
+
+@media (max-width: 1366px) {
+    
+    .logo img {
+        width: 400px;  
+        height: auto;
+        margin-left: 0; 
+    }
+
+ 
+    
+
+    nav {
+               
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+               justify-items: center;
+               padding-left: 0;
+               padding-right: 5px;
+               margin-top: 10px;
+           }
+
+           nav a {
+               margin: 10px 0;
+               
+           }
+
+    
+    .image-container {
+        height: 300px;
+    }
+
+    
+    .zooming-image {
+        object-fit: cover;
+        animation: none;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    
+    .center {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+.modal-content {
+    width: 90%;
+    max-width: 400px; 
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    
+}
+
+.about-imageModel {
+   
+    padding: auto;
+}
+
+
+
+    
+
+    
+    .view-bio-btn {
+        width: 100%;
+        max-width: 200px; 
+        margin: 20px auto;
+    }
+}
+
+
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+       
+        <div class="logo">
+            <img src="Color logo with background.svg" alt="Logo">
+        </div>
+       
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="team.html">TEAM</a>
+            <a href="aboutus1.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="marginTop">
+
+        <div>
+            <h1 class="h1center" style="color: #f5c126;padding-left: 38%;font-size: 33pt;">Meet Our Team</h1>
+        </div>
+        
+        <div class="about-container">
+    
+            <div class="about-section">
+                <hr>
+                <div class="about-content">
+                    <img src="David.png" alt="Co-principle" class="about-imageForDavid">
+                    <div class="about-description">
+                        <h2>David Z. Newman</h2>
+                        <h3>Principal & Founder, Coastal UP Partners</h3>
+                        <br>
+                        <br>
+                       
+                        <button class="view-bio-btn" id="openModalBtn1">View Bio</button>
+    
+                        <div id="bioModal1" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div>
+                                <img src="PNG image.png" alt="modelImage" class="about-imageModel">
+                                </div>
+                                <h2 class="textalign">David Z. Newman</h2>
+                                <ul>
+    
+                                    <li>Prior to founding Coastal Up Partners, David spent nearly a decade building Empire
+                                        Cornerstone,
+                                        where he led the acquisition, repositioning, and management of a portfolio of
+                                        Brooklyn, New York, mixed-use and multi-family residential properties,
+                                        generating very strong investor returns.​</li> <br>
+    
+                                    <li>David holds a B.S. in Finance and a B.A. in Real Estate from the University of
+                                        Denver, and an M.B.A with a dual focus in Finance and Construction Management from the University
+                                        of Denver’s Daniels School of Business.​</li> <br>
+    
+                                    <li>He has lectured on real estate and finance at Yale University, and recruits M.B.A.
+                                        candidates for the University of Denver.</li> <br>
+                                    <li> He currently serves as Treasurer of the Ocean Medicine Foundation. David is
+                                        licensed as a real estate professional in New York and Colorado.</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+    
+                <hr>
+            </div>
+    
+    
+    
+            <div class="about-section">
+                <hr>
+                <div class="about-content">
+                    <img src="pavan.png" alt="Co-principle" class="about-imageForPavan">
+                    <div class="about-description">
+                        <h2>Pavan M. Uttam</h2>
+                        <h3>Principal & Founder, Coastal UP Partners</h3>
+                        <br>
+                        <br>
+    
+                      
+                        <button class="view-bio-btn" id="openModalBtn2">View Bio</button>
+    
+                       
+    
+                        <div id="bioModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div>
+                                <img src="PNG image 2.png" alt="modelImage" class="about-imageModel">
+                            </div>
+                                <h2 class="textalign ">Pavan M. Uttam</h2>
+                                <ul>
+    
+                                    <li>As principal and co-founder of Coastal UP Partners, 
+                                        Pavan works with HNW individuals and family offices to 
+                                        allocate their funds in real estate as an asset class.​​</li> <br>
+    
+                                    <li>He has worked in the capital raise, acquisition, repositioning and development of properties in Manhattan,
+                                         Brooklyn & the East Coast as part of the GP/Asset management team.
+                                          Assets under management include portfolios of Single Family Rentals (SFR), 
+                                          Multi-family and Hospitality properties.​</li> <br>
+    
+                                    <li>Pavan has a B.S. in Finance & Marketing from the prestigious McIntire School of Commerce at the University of Virginia.
+                                         Among Pavan’s strengths is his relationships with business leaders and entrepreneurs globally.​</li>
+                                </ul>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+    
+                <hr>
+            </div>
+        </div>
+    
+    
+    
+        <div class="about-container">
+    
+            <div class="about-section">
+                <hr>
+                <div class="about-content">
+                    <img src="James.jpeg" alt="CFO" class="about-image">
+                    <div class="about-description">
+                        <h2>James Goody,CPA</h2>
+                        <h3>CFO, Coastal UP Partners</h3>
+                        <br>
+                        <br>
+                       
+    
+    
+                        <button class="view-bio-btn" id="openModalBtn3">View Bio</button>
+                        
+                      
+    
+                        <div id="bioModal3" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div>
+                                <img src="PNG image 3.png" alt="modelImage" class="about-imageModel">
+                               </div>
+                                <h2 class="textalign ">James Goody, CPA</h2>
+                                <ul>
+    
+                                    <li>James has been directly involved in the operation and ownership of over $6B of commercial 
+                                        and residential real estate including over 40,000 apartment units.​​​</li> <br>
+    
+                                    <li>Key previous roles include SVP and CFO of one of the largest and oldest vertically integrated real estate investment companies in San Francisco
+                                         that owns a $3B portfolio of apartments and commercial properties, 
+                                         National Director of Real Estate and Unique Assets at First Republic Bank, 
+                                         and CFO and Co-Founder of both Bay Equity Real Estate Acquisitions and Renovation General Contractors.​</li> <br>
+    
+                                    <li>His most recent role prior to joining Coastal UP was Principal / CFO of a vertically integrated real estate investment company
+                                        that is backed by Goldman Sachs and Carlyle Group and owns a $2B apartment and single-family real estate portfolio. ​​</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+    
+    
+    
+            <div class="about-section">
+                <hr>
+                <div class="about-content">
+                    <img src="Lucas.jpeg" alt="investments" class="about-image">
+                    <div class="about-description">
+                        <h2>Lucas Umbreit</h2>
+                        <h3>Investments, Coastal UP Partners</h3>
+                        <br>
+                        <br>
+                        
+    
+                        <button class="view-bio-btn" id="openModalBtn4">View Bio</button>
+                        
+                     
+    
+                        <div id="bioModal4" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div>
+                                <img src="PNG image 4.png" alt="modelImage" class="about-imageModel">
+                                </div>
+                                <h2 class="textalign ">Lucas Umbreit</h2>
+                                <ul>
+                                    <li>A Professional in Real Estate and Private Equity with $1bn investments experience throughout Europe 
+                                        and the US. Lucas has been mostly focused on the principal equity side throughout his 10-year career 
+                                        including a wide range of asset classes and investment strategies. </li> <br>
+                                    <li>He holds a M.Sc. in Investment Banking and Capital Markets from London School of Business and Finance, a B.A. (Hons) in Business Management from the University of Sunderland 
+                                        and a Diploma in International Business Management from the EBC Hochschule in Berlin.​</li>
+                                </ul>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    
+        <script src="script.js"></script>
+
+
+</body>
+</html>
+
+
+
